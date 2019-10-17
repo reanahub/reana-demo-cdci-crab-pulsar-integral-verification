@@ -1,0 +1,16 @@
+astropy
+diskcache
+
+pillow
+sentry-sdk==0.7.10
+
+jsonschema==2.6.0
+astroquery
+pillow
+oda_api
+
+
+oda-knowledge-base==0.2.27
+oda-client==1.3.11
+
+nb2workflow==1.2.28

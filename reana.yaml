@@ -1,0 +1,10 @@
+version: 0.3.0
+inputs:
+  parameters:
+    input: inputs.yaml
+workflow:
+  type: cwl
+  file: workflow/cwl/crab.cwl
+outputs:
+  files:
+   - cwl/docker_outdir/cwl.output.json
