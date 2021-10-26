@@ -21,12 +21,12 @@ run-local:
 
 validate:
 	cat reana.yaml
-	reana-client -lDEBUG validate | grep 'is a valid'
+	reana-client -lDEBUG validate
 	cwltool --validate workflow/cwl/*  | grep 'is valid'
 
 download:
 	reana-client   -lDEBUG  download --workflow $(name)
 	for key in $(shell cat cwl/docker_outdir/cwl.output.json | jq -r 'keys | .[] | select(. | contains("_content"))'); do  \
-            echo "saving $$key"; \
-            cat cwl/docker_outdir/cwl.output.json | jq -cr .$$key | python -c 'import sys, base64; open("'$$key'.png","wb").write(base64.b64decode(sys.stdin.read()))'; \
-        done
+	    echo "saving $$key"; \
+	    cat cwl/docker_outdir/cwl.output.json | jq -cr .$$key | python -c 'import sys, base64; open("'$$key'.png","wb").write(base64.b64decode(sys.stdin.read()))'; \
+	done
