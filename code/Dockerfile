@@ -1,4 +1,4 @@
-FROM integralsw/osa-python
+FROM docker.io/integralsw/osa-python
 
 ADD $REPO_PATH/requirements.txt /requirements.txt
 RUN mkdir -pv /home/oda; export HOME_OVERRRIDE=/home/oda; source /init.sh;  \

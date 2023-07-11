@@ -1,7 +1,7 @@
 name?="crab"
 
 #IMAGE_BASENAME=cdci/crab-integral-verification
-IMAGE_BASENAME=reanahub/reana-demo-cdci-crab-pulsar-integral-verification
+IMAGE_BASENAME=docker.io/reanahub/reana-demo-cdci-crab-pulsar-integral-verification
 IMAGE=$(IMAGE_BASENAME):$(shell git describe --always --tags)
 
 build:

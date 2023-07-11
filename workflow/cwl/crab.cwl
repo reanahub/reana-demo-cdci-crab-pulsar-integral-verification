@@ -58,4 +58,4 @@ outputs:
   type: string
 requirements:
   DockerRequirement:
-    dockerPull: reanahub/reana-demo-cdci-crab-pulsar-integral-verification
+    dockerPull: docker.io/reanahub/reana-demo-cdci-crab-pulsar-integral-verification
